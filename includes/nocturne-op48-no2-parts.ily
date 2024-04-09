@@ -168,9 +168,9 @@ rightHandUpper = \relative {
   \staffUp <bff gf'>8. <af f'>16 <f df'>4_~ <f a ef' f>) |
   
   \barNumberCheck 65
-  <df' f df'>4\( <bf f' bf> <df g df'> |
+  <df' f df'>4\( <bf f' bf> <df g c> |
   \slurDown \acciaccatura { bf'8 } <c, ef af>8. <bf ef g>16( <c ef af>2) |
-  <cf af cf'>4 <af ef' af> <cf f bf> |
+  <cf ef cf'>4 <af ef' af> <cf f bf> |
   \acciaccatura { af'8 } <bf, df gf>8. <af df f>16 <bf df gf>4 <af df f af> |
   % SrcB has last c tied to <gf c ef> in the next measure
   <bf df gf bf>4 <bf ef c'>\) \tuplet 6/4 { a16^( ef' gf e f c') } |
@@ -546,7 +546,7 @@ leftHandLower = \relative {
   \tuplet 3/2 { e8-\slurShapeF ^( b' gs' } ds4) \tuplet 3/2 { e,8-\slurShapeF
     ^( as gs' } css,4) |
   \tuplet 3/2 { ds,8-\slurShapeF ^( as' gs' } ds4) \tuplet 3/2 { 
-    cs,8-\slurShapeF^( fss e' } a,4) |
+    cs,8-\slurShapeF^( fss e' } as,4) |
   \tuplet 3/2 { b,8^( ds ds' } gs,4) \tuplet 3/2 { cs,8-\slurShapeF ^( gs' e'
     } as,4) |
   \stemUp 
