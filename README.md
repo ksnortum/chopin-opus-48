@@ -43,7 +43,7 @@ If you wish to eliminate the warnings when compiling the second nocturne, you ca
 Remove the `\articutate` part so that the line is simply `<<`.  The warnings will go away, but the MIDI output will suffer.
 
 ## Thanks
-Thanks to all the folks at the [LilyPond user's mailing list](mailto://lilypond-user@gnu.org) for all the help getting LilyPond to do what I wanted.
+Thanks to all the folks at the [LilyPond user's mailing list](mailto://lilypond-user@gnu.org) for all the help getting LilyPond to do what I wanted, and thanks to [phmcarty](https://github.com/phmccarty) for the proofreading.
 
 ## License
 This work is licensed under the [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) from Creative Commons.  Follow the link for details.  Basically, you can use this work however you want *if* you keep the same license and you attribute the work to me, Knute Snortum (knute (at) snortum (dot) net).
