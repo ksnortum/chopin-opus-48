@@ -33,6 +33,7 @@ slurShapeH = \shape #'(
 slurShapeI = \shape #'((0 . -0.5) (0 . 2) (0 . 0) (0 . 0)) \etc
 slurShapeJ = \shape #'((0 . 3) (0 . 3) (0 . 2.5) (0 . 2)) \etc
 slurShapeK = \shape #'((0 . 2.5) (0 . 2.5) (0 . 2) (0 . 1)) \etc
+slurShapeL = \shape #'((0 . 2.25) (-7 . -21) (3 . -1) (0.5 . 2)) \etc
 
 tieShapeA = \shape #'((1.5 . 0.5) (2 . 0) (0 . 0) (0 . 0)) \etc
 
@@ -148,10 +149,12 @@ rightHandUpper = \relative {
   \key c \minor 
   \voiceOne s4^\doppoiMovimento g'' a\rest af
   \tuplet 3/2 4 { s4 g4 s8 d~ } \hideNoteHead d4 s |
-  c4( c8. <ef, af c>16 d'4 \tuplet 3/2 { c8*2~[ c16 <c, d af'>] } |
-  g'4 \beamPositionsC <b, d f g>16 \grace { bf'!8 } <b,! d f af>16 <b d f g> d
-    \tuplet 3/2 4 { ef c) s4 } s4 | 
-  s4 g'' a\rest af~ |
+  c4-\slurShapeL ( c8. <ef, af c>16 d'4 \tuplet 3/2 { 
+    c8*2~[ c16 <c, d af'>] 
+  } |
+  g'4 \beamPositionsC <b, d f g>16 \grace { bf'!8 } <b,! d f af>16 <b d f g> 
+    \staffDown <f g b d> \tuplet 3/2 4 { <ef g ef'> <ef g c>) s4 } s4 | 
+  \staffUp s4 g'' a\rest af~ |
   af8 g4 f8~ \hideNoteHead f4 s |
   \tuplet 3/2 { <bf, d>8*2( d,8-\moveAccentA ->~ } d16 <d g> <d g c> <d g d'>
     ef'4~ ef8 fs,) |
@@ -300,10 +303,10 @@ leftHandUpper = \relative {
   
   \barNumberCheck 49
   s1 * 3 |
-  s4 s8. \crossStaff { <f g b>16 \tupletOff \tuplet 3/2 { 
-    \autoBeamOff <ef g>16 q \autoBeamOn \beamPositionsD ef8[ ef]  ef ef ef 
+  s4 s8. s16 \tupletOff \tuplet 3/2 { 
+    \autoBeamOff s8 \autoBeamOn \beamPositionsD ef8[ ef]  ef ef ef 
     \beamPositionsOff 
-  } } |
+  } |
   <ef g bf!>8 s4. s2 |
 }
 
