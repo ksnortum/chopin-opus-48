@@ -46,6 +46,8 @@ beamPositionsC = \once \override Beam.positions = #'(4 . 3)
 beamPositionsD = \override Beam.positions = #'(4 . 4)
 beamPositionsOff = \revert Beam.positions
 
+moveAccentA = \offset Y-offset 0.5 \etc
+
 %%% Music %%%
 
 global = {
@@ -90,7 +92,7 @@ rightHandUpper = \relative {
   \key c \major
   
   \barNumberCheck 25
-  \voiceOne <c e>2( d4 e8. f16 |
+  \voiceOne <c e>2(^\sottoVoce d4 e8. f16 |
   <c e>4) \staffDown <e, g>-\slurShapeE ( <e c'> \staffUp <c' e>4 | 
   <c g'>2 <c e>4 \staffDown \slashedGrace { e8 } <e, a d>8. <e a c>16~ |
   <d fs a c d>2 <d g b d>4 \staffUp <ds' f g>4 |
@@ -151,8 +153,8 @@ rightHandUpper = \relative {
     \tuplet 3/2 4 { ef c) s4 } s4 | 
   s4 g'' a\rest af~ |
   af8 g4 f8~ \hideNoteHead f4 s |
-  \tuplet 3/2 { <bf, d>8*2( d,8->~ } d16 <d g> <d g c> <d g d'>  ef'4~ ef8
-    fs,) |
+  \tuplet 3/2 { <bf, d>8*2( d,8-\moveAccentA ->~ } d16 <d g> <d g c> <d g d'>
+    ef'4~ ef8 fs,) |
   \tuplet 3/2 { fs4 g8~ } g2 g4->~-\slurShapeH ( |
   
   \barNumberCheck 57
@@ -499,7 +501,7 @@ dynamics = {
   s4 s2\> s8. s16\! |
   
   \barNumberCheck 25
-  \tag layout { s1^\sottoVoce | } \tag midi { s1\pp | }
+  \tag layout { s1 | } \tag midi { s1\pp | }
   s1 |
   s2. s4-\tweak Y-offset 1 -\tweak to-barline ##f \< |
   s2-\tweak Y-offset 1 \> s4\! s-\tweak to-barline ##f \< |
