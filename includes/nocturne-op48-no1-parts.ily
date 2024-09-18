@@ -20,10 +20,10 @@ slurShapeC = \shape #'(
                         ((0 . 0) (0 . 0) (0 . 0) (0 . 1))
                         ) \etc
 slurShapeD = \shape #'((0 . -1) (0 . -1) (0 . 0) (0 . 0)) \etc
-slurShapeE = \shape #'(
-                        ((0 . 3) (3 . 3) (0 . 0) (0 . 0.5))
-                        ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-                        ) \etc
+% slurShapeE = \shape #'(
+%                         ((0 . 3) (3 . 3) (0 . 0) (0 . 0.5))
+%                         ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
+%                         ) \etc
 slurShapeF = \shape #'((0 . 1) (0 . 3.5) (0 . 1) (0 . 0)) \etc
 slurShapeG = \shape #'((0 . 1) (0 . 3.5) (0 . 1) (0 . 0)) \etc
 slurShapeH = \shape #'(
@@ -92,11 +92,11 @@ rightHandUpper = \relative {
   \key c \major
   
   \barNumberCheck 25
-  \voiceOne <c e>2(^\sottoVoce d4 e8. f16 |
-  <c e>4) \staffDown <e, g>-\slurShapeE ( <e c'> \staffUp <c' e>4 | 
-  <c g'>2 <c e>4 \staffDown \slashedGrace { e8 } <e, a d>8. <e a c>16~ |
-  <d fs a c d>2 <d g b d>4 \staffUp <ds' f g>4 |
-  \oneVoice <e g e'>2 <d! g d'!>4 <e g e'>8 <f g b f'> |
+  \voiceOne <c e>2( \staffDown <f, g b d>4 < f g b e>8. <f g b f'>16 |
+  <e c' e>4)  <e g>( <e c'> <g c e>4 | 
+  <g c g'>2 <a c e>4 \staffDown \slashedGrace { e8 } <e a d>8. <e a c>16~ |
+  <d fs a c d>2 <d g b d>4 <g b ds f g>4 |
+  \staffUp \oneVoice <e' g e'>2 <d! g d'!>4 <e g e'>8 <f g b f'> |
   \connectArpeggios <e g c e>4\arpeggio <g, c e g> <c e a c> 
     \disconnectArpeggios <e g b e>\arpeggio |
   <e g c e g>2\arpeggio <e gs b e>4 <c d a' d>8[) r16 <b f' g>16]( |
@@ -289,11 +289,8 @@ leftHandUpper = \relative {
   \key c \major
   
   \barNumberCheck 25
-  \crossStaff { <e g>2 <f g b>4 \autoBeamOff q8. q16 } |
-  \autoBeamOn \crossStaff e4 s2 \crossStaff g4 |
-  \crossStaff { g2 a4 } s |
-  s2. \crossStaff { <g b>4 } |
-  s1 * 4 |
+  \crossStaff { <e g>2 s2 } |
+  s1 * 7 |
   
   \barNumberCheck 33
   s1 * 8 |
@@ -501,7 +498,7 @@ dynamics = {
   s4 s2\> s8. s16\! |
   
   \barNumberCheck 25
-  \tag layout { s1 | } \tag midi { s1\pp | }
+  \tag layout { s8 s^\sottoVoce s2. | } \tag midi { s1\pp | }
   s1 |
   s2. s4-\tweak Y-offset 1 -\tweak to-barline ##f \< |
   s2-\tweak Y-offset 1 \> s4\! s-\tweak to-barline ##f \< |
